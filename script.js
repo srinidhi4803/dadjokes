@@ -8,13 +8,13 @@ const generateJoke = async () => {
   const res = await fetch("https://icanhazdadjoke.com/", config);
   const data = await res.json();
   jokeEl.innerHTML = data.joke;
-
-  // Fetching with .then()
-  //   fetch("https://icanhazdadjoke.com/", config)
-  //     .then((res) => res.json())
-  //     .then((data) => (jokeEl.innerHTML = data.joke));
 };
 
+const display = () => {
+  console.log("Running application success");
+};
+
+display();
 generateJoke();
 
 jokeBtn.addEventListener("click", () => generateJoke());
